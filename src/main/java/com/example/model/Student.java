@@ -1,4 +1,4 @@
-package com.example.spring.model;
+package com.example.model;
 
 public class Student {
     private Integer age;

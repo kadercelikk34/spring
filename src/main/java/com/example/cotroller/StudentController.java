@@ -1,6 +1,6 @@
-package com.example.spring.cotroller;
+package com.example.cotroller;
 
-import com.example.spring.model.Student;
+import com.example.model.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
