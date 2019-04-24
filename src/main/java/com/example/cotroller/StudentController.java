@@ -17,6 +17,16 @@ public class StudentController {
         return new ModelAndView("student","command", new Student());
     }
     @RequestMapping(value = "/addStudent", method = RequestMethod.POST)
+    public String addStudent(@ModelAttribute("SpringWeb")Student student,
+                             ModelMap model) {
+        model.addAttribute("name", student.getName());
+        model.addAttribute("age", student.getAge());
+        model.addAttribute("id", student.getId());
+
+        return "result";
+    }
+
+ /*   @RequestMapping(value = "/addStudent", method = RequestMethod.POST)
     @ExceptionHandler(value = SpringException.class)
     public String addStudent( @ModelAttribute("HelloWeb")Student student,
                               ModelMap model) {
@@ -33,6 +43,6 @@ public class StudentController {
         }
         model.addAttribute("id", student.getId());
         return "result";
-    }
+    }*/
 
 }
